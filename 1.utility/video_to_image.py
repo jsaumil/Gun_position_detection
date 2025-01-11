@@ -47,11 +47,11 @@ else:
             print(f"Saved: {frame_filename}")
             frame_count += 1
             # Save frames at 1 FPS
-            if frame_index % frame_skip == 0:
-                frame_filename = os.path.join(output_dir, f"frame_{frame_count:04d}.jpg")
-                cv2.imwrite(frame_filename, frame)
-                print(f"Saved: {frame_filename}")
-                frame_count += 1
+            # if frame_index % frame_skip == 0:
+            #     frame_filename = os.path.join(output_dir, f"frame_{frame_count:04d}.jpg")
+            #     cv2.imwrite(frame_filename, frame)
+            #     print(f"Saved: {frame_filename}")
+            #     frame_count += 1
 
             frame_index += 1
 
