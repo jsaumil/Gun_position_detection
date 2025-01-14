@@ -3,24 +3,34 @@ import os
 
 # # Path to your video file
 # video_path = "people-detection.mp4"
-video_folder = "path_to_video_folder"
+video_folder = r"E:\Github\Gun_position_detection\data\video\AK47"
 
 # Directory to save the frames
-output_dir = "frames_1fps"
-os.makedirs(output_dir, exist_ok=True)
+# output_dir = "frames_1fps"
+# os.makedirs(output_dir, exist_ok=True)
+base_output_dir = r"E:\Github\Gun_position_detection\data\photos\AK 47"
 
 video_files = [f for f in os.listdir(video_folder) if f.lower().endswith(('.mp4', '.avi', '.mov'))]
+
+# video_files=[]
+# for f in os.listdir(video_folder):
+#     if f.lower().endswith(('.mp4', '.avi', '.mov')):
+#         video_files.append(f)
 
 # Check if there are any video files
 if not video_files:
     print(f"No video files found in {video_folder}.")
 else:
+    
     # Loop over each video file in the folder
     for video_file in video_files:
         video_path = os.path.join(video_folder, video_file)
 
         # Open the video file
         cap = cv2.VideoCapture(video_path)
+        
+        output_dir = os.path.join(base_output_dir, os.path.splitext(video_file)[0])
+        os.makedirs(output_dir, exist_ok=True)
 
         if not cap.isOpened():
             print(f"Error: Cannot open video file '{video_path}'.")

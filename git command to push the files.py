@@ -1,7 +1,7 @@
 import subprocess
 import time
 
-# Define the commit message
+# Define the commit message-
 commit_message = "Updated all files"
 
 def push_changes():
