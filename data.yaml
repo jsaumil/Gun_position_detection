@@ -1,0 +1,36 @@
+# Dataset paths
+train: /home/rohan/New folder/dataset/train/img              # Path to training images
+val: /home/rohan/New folder/dataset/val/img                 # Path to validation images
+
+# Label file paths (annotations folder)
+# train_labels: /home/rohan/New folder/dataset/train/label         # Path to training annotations (txt files)
+# val_labels: /home/rohan/New folder/dataset/val/label           # Path to validation annotations (txt files)
+
+# Keypoint settings
+num_keypoints: 8                                    # Total number of keypoints in your dataset
+# flip_idx:                                           # Specify pairs of keypoints to swap when flipping horizontally
+#   - [6, 7]
+#   - [8, 9]
+#   - [10, 11]
+#   - [12, 13]
+#   - [14, 15]
+#   - [16, 17]
+#   - [18, 19]
+#   - [20, 21]
+kpt_shape: [8, 2]                                   # Shape of keypoints: 8 keypoints, each with x and y coordinates
+
+# Keypoint names
+keypoint_names:
+  - butt
+  - pistol grip
+  - trigger
+  - cover
+  - rear sight
+  - barrel jacket
+  - left bipod
+  - right bipod
+
+# Class settings
+nc: 1                                               # Number of classes (1 for firearm detection)
+names:
+  0: LMG                                            # The class index should match your label (0 for firearm class)
