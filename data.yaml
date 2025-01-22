@@ -1,6 +1,6 @@
 # Dataset paths
-train: /home/rohan/New folder/dataset/train/img              # Path to training images
-val: /home/rohan/New folder/dataset/val/img                 # Path to validation images
+train: E:\Github\Gun_position_detection\dataset\train\img              # Path to training images
+val: E:\Github\Gun_position_detection\dataset\val\img                 # Path to validation images
 
 # Label file paths (annotations folder)
 # train_labels: /home/rohan/New folder/dataset/train/label         # Path to training annotations (txt files)
