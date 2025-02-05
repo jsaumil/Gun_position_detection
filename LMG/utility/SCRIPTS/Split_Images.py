@@ -86,7 +86,7 @@ def split_images_and_labels(images_folder, labels_folder, destination_folder):
     random.seed(42)
     random.shuffle(images)
 
-    train_size = int(len(images) * 0.95)
+    train_size = int(len(images) * 0.90)
     train_images = images[:train_size]
     valid_images = images[train_size:]
 
