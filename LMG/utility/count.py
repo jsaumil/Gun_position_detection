@@ -20,7 +20,7 @@ def count_files_in_folders(base_photos_dir, base_labels_dir):
         print(f"  Photos: {num_photos} files")
         print(f"  Labels: {num_labels} files")
 
-base_photos_dir = r"data/Labels/LMG"  # Replace with the base directory of your photos
-base_labels_dir = r"data/photos/LMG"  # Replace with the base directory of your labels
+base_photos_dir = r"/home/saumil/Git/Gun_position_detection/LMG/dataset/photos"  # Replace with the base directory of your photos
+base_labels_dir = r"/home/saumil/Git/Gun_position_detection/LMG/annotaions"  # Replace with the base directory of your labels
 
 count_files_in_folders(base_photos_dir, base_labels_dir)
