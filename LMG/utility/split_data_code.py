@@ -97,8 +97,8 @@ def copy_common_folders(label_dir, photo_dir, target_dir):
     print(f"Copied all common folders to {target_dir}")
 
 # Paths
-label_dir = r"data/Labels/LMG"
-photo_dir = r"data/photos/LMG"
-target_dir = r"C:\Users\ASUS\Downloads\Gun_position_detection\dataset"
+label_dir = r"/home/rohan/Gun_position_detection/data/Labels/LMG/V1"
+photo_dir = r"/home/rohan/Gun_position_detection/data/photos/LMG/V1"
+target_dir = r"/home/rohan/Gun_position_detection/training test"
 
 copy_common_folders(label_dir, photo_dir, target_dir)
