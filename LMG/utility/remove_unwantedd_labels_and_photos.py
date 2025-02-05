@@ -47,6 +47,6 @@ def delete_unmatched_files_in_folders(base_photos_dir, base_labels_dir):
 
 # Example usage
 base_photos_dir = r"/home/saumil/Git/Gun_position_detection/LMG/dataset/photos"  # Replace with the base directory of your photos
-base_labels_dir = r"/home/rohan/Gun_position_detection/data/Labels/LMG"  # Replace with the base directory of your labels
+base_labels_dir = r"/home/saumil/Git/Gun_position_detection/LMG/annotaions"  # Replace with the base directory of your labels
 
 delete_unmatched_files_in_folders(base_photos_dir, base_labels_dir)
