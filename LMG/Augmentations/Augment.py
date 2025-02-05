@@ -5,8 +5,8 @@ import numpy as np
 # Paths
 image_root = r"/home/saumil/Git/Gun_position_detection/LMG/dataset/photos"
 annotation_root = r"/home/saumil/Git/Gun_position_detection/LMG/annotaions"
-output_image_folder = r"/home/rohan/Gun_position_detection/Augmentations/val/Images"
-output_coordinates_folder = r"/home/rohan/Gun_position_detection/Augmentations/val/Labels"
+output_image_folder = r"/home/saumil/Git/Gun_position_detection/LMG/Augmentations/image"
+output_coordinates_folder = r"/home/saumil/Git/Gun_position_detection/LMG/Augmentations/label"
 
 # Ensure output folders exist
 os.makedirs(output_image_folder, exist_ok=True)
