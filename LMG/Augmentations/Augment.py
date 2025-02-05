@@ -4,7 +4,7 @@ import numpy as np
 
 # Paths
 image_root = r"/home/saumil/Git/Gun_position_detection/LMG/dataset/photos"
-annotation_root = r"/home/rohan/Gun_position_detection/training_test/Valid/Labels"
+annotation_root = r"/home/saumil/Git/Gun_position_detection/LMG/annotaions"
 output_image_folder = r"/home/rohan/Gun_position_detection/Augmentations/val/Images"
 output_coordinates_folder = r"/home/rohan/Gun_position_detection/Augmentations/val/Labels"
 
