@@ -124,7 +124,7 @@ def split_images_and_labels(images_folder, labels_folder, destination_folder):
 
 # Example usage with multiple folders
 image_folders = [
-    "/home/rohan/Gun_position_detection/data/photos/LMG/project,1",
+    "/home/saumil/Git/Gun_position_detection/LMG/dataset/photos/project,1",
     "/home/rohan/Gun_position_detection/data/photos/LMG/project.2",
     "/home/rohan/Gun_position_detection/data/photos/LMG/project.3",
     "/home/rohan/Gun_position_detection/data/photos/LMG/project.4",
