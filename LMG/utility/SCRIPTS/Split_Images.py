@@ -126,10 +126,10 @@ def split_images_and_labels(images_folder, labels_folder, destination_folder):
 image_folders = [
     "/home/saumil/Git/Gun_position_detection/LMG/dataset/photos/project,1",
     "/home/saumil/Git/Gun_position_detection/LMG/dataset/photos/project.2",
-    "/home/rohan/Gun_position_detection/data/photos/LMG/project.3",
-    "/home/rohan/Gun_position_detection/data/photos/LMG/project.4",
-    "/home/rohan/Gun_position_detection/data/photos/LMG/project.6",
-    "/home/rohan/Gun_position_detection/data/photos/LMG/V1"
+    "/home/saumil/Git/Gun_position_detection/LMG/dataset/photos/project.3",
+    "/home/saumil/Git/Gun_position_detection/LMG/dataset/photos/project.4",
+    "/home/saumil/Git/Gun_position_detection/LMG/dataset/photos/project.6",
+    "/home/saumil/Git/Gun_position_detection/LMG/dataset/photos/V1"
 ]
 label_folders = [
     "/home/rohan/Gun_position_detection/data/Labels/LMG/project,1",
