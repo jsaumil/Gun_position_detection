@@ -64,6 +64,13 @@ def process_image_and_annotation(image_path, annotation_path, output_image_folde
     image_name = os.path.basename(image_path)
     annotation_name = os.path.basename(annotation_path)
 
+    # Extract parent folder name
+    parent_folder_name = os.path.basename(os.path.dirname(image_path))
+
+    # Prefix filenames with parent folder name
+    prefixed_image_name = f"{parent_folder_name}_{image_name}"
+    prefixed_annotation_name = f"{parent_folder_name}_{annotation_name}"
+
     image = cv2.imread(image_path)
     if image is None:
         print(f"Error: Could not read image {image_path}")
@@ -72,27 +79,27 @@ def process_image_and_annotation(image_path, annotation_path, output_image_folde
     height, width = image.shape[:2]
 
     # Save original image and annotations
-    cv2.imwrite(os.path.join(output_image_folder, f"original_{image_name}"), image)
+    cv2.imwrite(os.path.join(output_image_folder, f"original_{prefixed_image_name}"), image)
     with open(annotation_path, 'r') as src, open(
-            os.path.join(output_coordinates_folder, f"original_{annotation_name}"), 'w') as dst:
+            os.path.join(output_coordinates_folder, f"original_{prefixed_annotation_name}"), 'w') as dst:
         dst.writelines(src.readlines())
 
     # Flip horizontally
     flipped_image = flip_image_horizontally(image)
-    flipped_image_path = os.path.join(output_image_folder, f"flipped_horizontal_{image_name}")
+    flipped_image_path = os.path.join(output_image_folder, f"flipped_horizontal_{prefixed_image_name}")
     cv2.imwrite(flipped_image_path, flipped_image)
 
     flipped_annotations = flip_keypoints_horizontally(annotation_path, width)
-    flipped_annotation_path = os.path.join(output_coordinates_folder, f"flipped_horizontal_{annotation_name}")
+    flipped_annotation_path = os.path.join(output_coordinates_folder, f"flipped_horizontal_{prefixed_annotation_name}")
     save_annotations(flipped_annotation_path, flipped_annotations)
 
     # Rotate 90 degrees clockwise
     rotated_image = rotate_image_90_clockwise(image)
-    rotated_image_path = os.path.join(output_image_folder, f"rotated_90_clockwise_{image_name}")
+    rotated_image_path = os.path.join(output_image_folder, f"rotated_90_clockwise_{prefixed_image_name}")
     cv2.imwrite(rotated_image_path, rotated_image)
 
     rotated_annotations = rotate_keypoints_clockwise(annotation_path)
-    rotated_annotation_path = os.path.join(output_coordinates_folder, f"rotated_90_clockwise_{annotation_name}")
+    rotated_annotation_path = os.path.join(output_coordinates_folder, f"rotated_90_clockwise_{prefixed_annotation_name}")
     save_annotations(rotated_annotation_path, rotated_annotations)
 
 # Process all images in the folder and its subfolders
