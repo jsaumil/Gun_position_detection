@@ -69,3 +69,4 @@ try:
         time.sleep(30)  # Wait for 30 seconds before the next push (adjust as needed)
 except KeyboardInterrupt:
     print("Auto-push stopped.")
+    
