@@ -22,7 +22,7 @@ def git_push(commit_message="Added new images batch"):
 
 if __name__ == "__main__":
     source_folder = r"E:\Github\New folder (2)\data\photos\AK 47\V3"  # Update this path
-    destination_folder = r"E:\Github\Gun_position_detection\AK 47\dataset\photos\V4"  # Update this path
+    destination_folder = r"E:\Github\Gun_position_detection\AK 47\dataset\photos\V3"  # Update this path
     
     images = sorted(os.listdir(source_folder))
     mid_index = len(images) // 2
